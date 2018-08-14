@@ -12,5 +12,5 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  helper_methods :logged_in?
+  helper_method :logged_in?
 end
