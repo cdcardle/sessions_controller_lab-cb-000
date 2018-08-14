@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    raise params
     if params[:name].empty?
       session[:name] = params[:name]
       redirect_to '/'
