@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       redirect_to '/login'
     else
       session[:name] = params[:name]
-      render root
+      render '/'
     end
   end
 
