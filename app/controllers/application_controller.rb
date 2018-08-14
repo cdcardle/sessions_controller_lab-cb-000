@@ -4,13 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    redirect_to '/login' if !logged_in?
+    redirect_to '/login' if !session[:name]?
   end
-
-  def logged_in?
-    session[:name]
-  end
-
-  private
-  helper_method :logged_in?
 end
